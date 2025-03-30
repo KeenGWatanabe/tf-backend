@@ -1,4 +1,4 @@
-Yes! Since you want to **repurpose the S3 bucket** from a **public static website bucket** to a **secure Terraform backend bucket**, I'll rewrite the configuration. Here’s the corrected version:
+To **repurpose the S3 bucket** from a **public static website bucket** to a **secure Terraform backend bucket**, I'll rewrite the configuration. Here’s the corrected version:
 
 ---
 
