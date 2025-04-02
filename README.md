@@ -10,7 +10,7 @@ provider "aws" {
 
 # 1. Create the S3 Bucket (for Terraform state)
 resource "aws_s3_bucket" "terraform_state" {
-  bucket = "rgers3.sctp-sandbox.com"  # Must be globally unique
+  bucket = "rgers3.tfstate-backend.com"  # Must be globally unique
   force_destroy = true  # Optional: Allows deletion even if not empty
 }
 
