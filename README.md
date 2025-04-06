@@ -1,3 +1,17 @@
+# When calling this bucket
+# backend # check this created before calling
+terraform {
+  backend "s3" {
+    bucket = "rgers3.tfstate-backend.com"
+    key = "terraform.tfstate"
+    region = "us-east-1"
+    dynamodb_table = "terraform-state-locks"  # Critical for locking
+  }
+}
+
+
+
+
 To **repurpose the S3 bucket** from a **public static website bucket** to a **secure Terraform backend bucket**, I'll rewrite the configuration. Here’s the corrected version:
 
 ---
