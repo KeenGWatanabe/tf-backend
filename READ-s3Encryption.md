@@ -26,7 +26,7 @@ This configuration enables **server-side encryption (SSE) for your S3 bucket** u
 | `rule { apply_server_side_encryption_by_default }` | Sets default encryption for all objects. |
 | `sse_algorithm = "AES256"` | Uses **AWS-managed AES-256 keys** (no user input needed). |
 
----
+
 
 ### **3. Alternatives (If You Need More Control)**
 If you want to use **your own keys** (e.g., for compliance), you could switch to:  
