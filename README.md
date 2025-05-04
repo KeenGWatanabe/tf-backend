@@ -2,7 +2,7 @@
 # backend # check this created before calling
 terraform {
   backend "s3" {
-    bucket = "rgers3.tfstate-backend.com"
+    bucket = "ce994.tfstate-backend.com"
     key = "terraform.tfstate"
     region = "us-east-1"
     dynamodb_table = "terraform-state-locks"  # Critical for locking
