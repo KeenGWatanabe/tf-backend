@@ -4,7 +4,7 @@ provider "aws" {
 
 # 1. Create the S3 Bucket (for Terraform state)
 resource "aws_s3_bucket" "terraform_state" {
-  bucket = "ce994.tfstate-backend.com"  # Must be globally unique
+  bucket = "grp-4.tfstate-backend.com"  # Must be globally unique
   force_destroy = true  # Optional: Allows deletion even if not empty
 }
 
