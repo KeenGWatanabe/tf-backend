@@ -4,7 +4,7 @@ provider "aws" {
 
 # 1. Create the S3 Bucket (for Terraform state)
 resource "aws_s3_bucket" "terraform_state" {
-  bucket = "ce-grp-4.tfstate-backend.com"  # Must be globally unique
+  bucket = "${var.name_prefix}.tfstate-backend.com"  # Must be globally unique
   force_destroy = true  # Optional: Allows deletion even if not empty
 }
 
@@ -40,7 +40,7 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "state_encryption"
 
 # 5. (Optional) State Locking with DynamoDB (Prevent conflicts)
 resource "aws_dynamodb_table" "terraform_locks" {
-  name         = "ce-grp-4-terraform-state-locks"
+  name         = "${var.name_prefix}-terraform-state-locks"
   billing_mode = "PAY_PER_REQUEST"
   hash_key     = "LockID"
 
