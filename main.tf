@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "ap-southeast-1"  # Same region as before
+  region = "us-east-1"  # Same region as before
 }
 
 # 1. Create the S3 Bucket (for Terraform state)
